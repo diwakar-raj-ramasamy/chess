@@ -1,0 +1,54 @@
+:root {
+  /* Premium Dark Theme */
+  --bg-app: #0f1115;
+  --bg-panel: #181b21;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0b0;
+
+  /* Board Colors - Slate Glass Theme */
+  --board-light: #e2e8f0;
+  --board-dark: #475569;
+  --board-highlight: rgba(255, 255, 0, 0.4);
+  --board-check: rgba(255, 0, 0, 0.4);
+  --board-last-move: rgba(100, 200, 255, 0.4);
+
+  /* UI Accents */
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+  --danger: #ef4444;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(24, 27, 33, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  /* Allow scrolling if content is too large */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}

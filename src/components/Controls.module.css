@@ -1,0 +1,193 @@
+.panel {
+    background: var(--bg-panel);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--text-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #aaa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.statusBox {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.turnIndicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.activeTurn {
+    color: var(--accent-primary);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.vs {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.gameStatus {
+    margin-top: 1rem;
+    color: var(--danger);
+    font-weight: 900;
+    font-size: 1.5rem;
+    /* Make it big */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: bounce 0.5s;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--danger);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.gameOver {
+    color: var(--danger);
+    font-weight: 900;
+    margin-top: 5px;
+    animation: pulse 1s infinite;
+}
+
+.modeSelect {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modeSelect button {
+    flex: 1;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.activeMode {
+    background: var(--accent-primary) !important;
+    color: white !important;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.actions button {
+    padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s;
+}
+
+.actions button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.resumeBtn {
+    background: rgba(16, 185, 129, 0.2) !important;
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    color: #34d399 !important;
+}
+
+.resumeBtn:hover {
+    background: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dangerBtn {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%) !important;
+    color: white !important;
+    border-color: #b91c1c !important;
+}
+
+.dangerBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+
+.secondaryBtn {
+    background: transparent;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.info {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .panel {
+        width: 100%;
+        max-width: 600px;
+    }
+}
