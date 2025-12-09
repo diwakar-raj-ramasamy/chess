@@ -4,7 +4,7 @@ import { useGame } from '../context/GameContext';
 import { RefreshCw } from 'lucide-react';
 
 export const GameOverModal: React.FC = () => {
-    const { isGameOver, status, turn, resetGame, game } = useGame();
+    const { isGameOver, resetGame, game } = useGame();
 
     if (!isGameOver) return null;
 
